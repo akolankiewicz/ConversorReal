@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .infos{
+            border: 0.1px solid brown;
+            background-color: wheat;
+            width: 50%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        button{
+            font-size: 16px;
+            color: white;
+            width: 30%;
+            margin: auto;
+            padding: 7px;
+            border-radius: 5px;
+            transition: .5s;
+            background-color: rgb(152, 125, 125);
+        }
+        button:hover{
+            transform: scale(1.03);
+            background-color: rgb(138, 109, 109);
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        select{
+            border-radius: 5px;
+            padding: 5px;
+            background-color: azure;
+            transition: .5s;
+        }
+        .result{
+            background-color: rgb(167, 206, 109);
+            border-radius: 10px;
+            padding: 10px;
+            width: 30%;
+            margin: auto;
+            border: 0.1px solid black;
+            font-size: 20px;
+            transition: .7s;
+        }
+        .result:hover{
+            transform: scale(1.01);
+            background-color: rgb(156, 196, 96);
+        }
+    </style>
+</head>
+<body>
+    <div class="infos">
+    <h1>Conversor de Moedas</h1>
+    <input type="number" id="n1"> Real em:
+     <select id="select1" name="currency">
+        <option value="1">Dollar</option>5,153
+        <option value="2">Euro</option>5,571
+        <option value="3">Libra</option>6,53
+        <option value="4">Yen</option>29.569
+        <option value="5">Peso</option>0,006
+    </select> <br><br>
+    <button onclick="funcao()">Converter</button>
+</div> <br><br>
+<div class="result">
+    <p id="res">Aqui aparecerá seu resultado</p>
+</div>
+    <script>
+        function funcao(){
+            var select = document.getElementById('select1');
+            var n1 = document.getElementById('n1');
+            var res = document.getElementById('res')
+            if (select.value == 1){
+                res.innerHTML = `${n1.value/5.153} Doláres`
+            }
+            if (select.value == 2){
+                res.innerHTML = `${n1.value/5.571} Euros`
+            }
+            if (select.value == 3){
+                res.innerHTML = `${n1.value/6.56} Libras`
+            }
+            if (select.value == 4){
+                res.innerHTML = `${n1.value/29.569} Yens`
+            }
+            if (select.value == 5){
+                res.innerHTML = `${n1.value/0.006} Pesos`
+            } 
+        }
+    </script>
+    
+</body>
+</html>
